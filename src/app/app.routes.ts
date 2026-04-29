@@ -1,11 +1,13 @@
 import { Routes } from '@angular/router';
 import { NotFoundComponent } from './features/not-found/not-found.component';
 import { LayoutComponent } from './features/layout/layout.component';
+import { filmsResolver } from './core/resolvers/films.resolver';
 
 export const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    resolve: { films: filmsResolver },
     children: [
       {
         path: '',
