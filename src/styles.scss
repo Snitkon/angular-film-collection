@@ -7,7 +7,7 @@
 
   // Text Colors
   --text-white: #ffffff;
-  --text-gray: #4a5565;
+  --text-grey: #4a5565;
   --text-black: #0a0a0a;
 
   // Accent
@@ -23,6 +23,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -31,24 +33,41 @@ html {
 
 html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  height: 100vh;
 }
 
 h1,
-h2,
-h3 {
+h2 {
   color: var(--text-white);
-  margin: 0;
+  cursor: default;
 }
 
 body {
+  // TODO: Fix on Mixin
+  font-family: 'Inter', sans-serif;
   background-color: var(--bg-light);
   color: var(--text-black);
-  font-family:
-    'Inter',
-    system-ui,
-    -apple-system,
-    sans-serif;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+header,
+footer {
+  background-color: var(--bg-dark);
+}
+
+a,
+span,
+p {
+  color: var(--text-white);
 }

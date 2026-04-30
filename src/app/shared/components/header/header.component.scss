@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  flex-shrink: 0;
+}
+
+#header {
+  // TODO: Fix on Mixin
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(37, 23, 106, 0.55);
+}
+
+nav {
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 1.5rem;
+}
+
+a:hover {
+  color: rgb(175, 169, 169);
+}
