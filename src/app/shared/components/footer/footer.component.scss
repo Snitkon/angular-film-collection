@@ -6,6 +6,31 @@
   padding: 1.5rem;
   background: var(--bg-dark);
   box-shadow: 0 8px 25px rgba(37, 23, 106, 0.55);
+
+  .wrapper {
+    // TODO: Fix on Mixin
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    margin: auto;
+
+    a {
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    a:hover {
+      color: var(--accent-color);
+      transform: scale(1.1);
+    }
+
+    p {
+      cursor: default;
+    }
+  }
 }
 
 span {
