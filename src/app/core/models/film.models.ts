@@ -1,6 +1,7 @@
 export interface IFilm {
   id: number;
   title: string;
+  poster?: string;
   year: number;
   genre: string;
   rating: number;

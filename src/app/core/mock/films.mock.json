@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Interstellar",
+    "poster": "https://image.tmdb.org/t/p/original/iawqQdFKI7yTUoSkDNP8gyV3J3r.jpg",
     "year": 2014,
     "genre": "Sci-Fi",
     "rating": 8.6,
@@ -13,6 +14,7 @@
   {
     "id": 2,
     "title": "Inception",
+    "poster": "https://image.tmdb.org/t/p/original/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
     "year": 2010,
     "genre": "Sci-Fi",
     "rating": 8.8,
@@ -24,6 +26,7 @@
   {
     "id": 3,
     "title": "The Shawshank Redemption",
+    "poster": "https://image.tmdb.org/t/p/original/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
     "year": 1994,
     "genre": "Drama",
     "rating": 9.3,
@@ -35,6 +38,7 @@
   {
     "id": 4,
     "title": "The Dark Knight",
+    "poster": "https://image.tmdb.org/t/p/original/xQPgyZOBhaz1GdCQIPf5A5VeFzO.jpg",
     "year": 2008,
     "genre": "Action",
     "rating": 9.0,
@@ -46,6 +50,7 @@
   {
     "id": 5,
     "title": "Forrest Gump",
+    "poster": "https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
     "year": 1994,
     "genre": "Drama",
     "rating": 8.8,
@@ -57,6 +62,7 @@
   {
     "id": 6,
     "title": "The Matrix",
+    "poster": "https://image.tmdb.org/t/p/original/aOIuZAjPaRIE6CMzbazvcHuHXDc.jpg",
     "year": 1999,
     "genre": "Sci-Fi",
     "rating": 8.7,
@@ -68,6 +74,7 @@
   {
     "id": 7,
     "title": "Fight Club",
+    "poster": "https://image.tmdb.org/t/p/original/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
     "year": 1999,
     "genre": "Thriller",
     "rating": 8.8,
@@ -79,6 +86,7 @@
   {
     "id": 8,
     "title": "The Lord of the Rings: The Return of the King",
+    "poster": "https://image.tmdb.org/t/p/original/uexxR7Kw1qYbZk0RYaF9Rx5ykbj.jpg",
     "year": 2003,
     "genre": "Fantasy",
     "rating": 9.0,
@@ -90,6 +98,7 @@
   {
     "id": 9,
     "title": "Schindler's List",
+    "poster": "https://image.tmdb.org/t/p/original/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
     "year": 1993,
     "genre": "Drama",
     "rating": 9.0,
@@ -101,6 +110,7 @@
   {
     "id": 10,
     "title": "Pulp Fiction",
+    "poster": "https://image.tmdb.org/t/p/original/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
     "year": 1994,
     "genre": "Crime",
     "rating": 8.9,
@@ -112,6 +122,7 @@
   {
     "id": 11,
     "title": "The Green Mile",
+    "poster": "https://image.tmdb.org/t/p/original/velWPhVMQeQKcxggNEU8YmIo52R.jpg",
     "year": 1999,
     "genre": "Drama",
     "rating": 8.6,
@@ -123,6 +134,7 @@
   {
     "id": 12,
     "title": "Gladiator",
+    "poster": "https://image.tmdb.org/t/p/original/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg",
     "year": 2000,
     "genre": "Action",
     "rating": 8.5,

@@ -14,7 +14,7 @@ export const routes: Routes = [
         loadChildren: () => import('./routes/catalog.routes').then((r) => r.CATALOG_ROUTE),
       },
       {
-        path: 'film/:id',
+        path: ':title',
         loadChildren: () => import('./routes/details.routes').then((r) => r.FILM_DETAILS_ROUTE),
       },
       {

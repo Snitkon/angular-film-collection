@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject, input } from '@angular/core';
+import { FilmService } from '../../core/services/film.service';
+import { toSlug } from '../../shared/utils/url.util';
 
 @Component({
   selector: 'app-film-details',
@@ -6,4 +8,11 @@ import { Component } from '@angular/core';
   templateUrl: './film-details.component.html',
   styleUrl: './film-details.component.scss',
 })
-export class FilmDetailsComponent {}
+export class FilmDetailsComponent {
+  private filmService = inject(FilmService);
+  public title = input.required<string>();
+
+  public filmComputed = computed(() => {
+    return this.filmService.films().find((film) => toSlug(film.title) === this.title());
+  });
+}
