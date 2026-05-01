@@ -1,0 +1,20 @@
+@let film = filmInput();
+<div class="film-card">
+  <div class="film-card__top-block">
+    <img class="film-poster" src="" alt="film-poster" />
+    <button class="favorite-btn">
+      <img src="icons/favorite.svg" alt="favorite-icon" width="24" height="24" />
+    </button>
+  </div>
+  <div class="film-card__bottom-block">
+    <h3 class="title">{{ film.title }}</h3>
+    <div class="about">
+      <span class="year"> {{ film.year }}</span>
+      <span class="genre">{{ film.genre }}</span>
+      <span class="rating">
+        <img src="icons/star.svg" alt="star-icon" width="16" height="16" />
+        {{ film.rating }}
+      </span>
+    </div>
+  </div>
+</div>

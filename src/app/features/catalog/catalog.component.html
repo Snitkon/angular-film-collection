@@ -1,3 +1,4 @@
-<pre>
-  {{ films() | json }}
-</pre>
+@let films = filmsData();
+@for (film of films; track film.id) {
+  <app-film-card [filmInput]="film" />
+}

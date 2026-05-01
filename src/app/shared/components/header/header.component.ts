@@ -6,8 +6,5 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
-  host: {
-    class: 'header',
-  },
 })
 export class HeaderComponent {}

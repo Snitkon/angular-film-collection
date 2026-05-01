@@ -1,14 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { FilmService } from '../../core/services/film.service';
-import { JsonPipe } from '@angular/common';
+import { FilmCardComponent } from './components/film-card/film-card.component';
 
 @Component({
   selector: 'app-catalog',
-  imports: [JsonPipe],
+  imports: [FilmCardComponent],
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.scss',
 })
 export class CatalogComponent {
   private filmService = inject(FilmService);
-  public films = this.filmService.films;
+  public filmsData = this.filmService.films;
 }
