@@ -1,4 +1,7 @@
 @let films = filmsData();
-@for (film of films; track film.id) {
-  <app-film-card [filmInput]="film" />
-}
+<app-input />
+<div class="cards">
+  @for (film of films; track film.id) {
+    <app-film-card [filmInput]="film" />
+  }
+</div>

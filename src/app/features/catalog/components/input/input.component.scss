@@ -1,0 +1,22 @@
+.input {
+  // TODO: Fix to Mixin
+
+  display: flex;
+  max-width: 350px;
+  margin: auto;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.3rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--bg-grey);
+
+  input {
+    border: none;
+    background-color: transparent;
+    height: 30px;
+    width: 100%;
+    text-decoration: none;
+    outline: none;
+  }
+}
