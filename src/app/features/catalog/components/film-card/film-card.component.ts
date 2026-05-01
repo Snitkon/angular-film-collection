@@ -15,6 +15,6 @@ export class FilmCardComponent {
 
   public openDetails() {
     const title = this.filmInput().title;
-    this.router.navigate(['/', toSlug(title)]);
+    this.router.navigate(['/home', toSlug(title)]);
   }
 }

@@ -11,10 +11,15 @@ export const routes: Routes = [
     children: [
       {
         path: '',
+        pathMatch: 'full',
+        redirectTo: 'home',
+      },
+      {
+        path: 'home',
         loadChildren: () => import('./routes/catalog.routes').then((r) => r.CATALOG_ROUTE),
       },
       {
-        path: ':title',
+        path: 'home/:title',
         loadChildren: () => import('./routes/details.routes').then((r) => r.FILM_DETAILS_ROUTE),
       },
       {
