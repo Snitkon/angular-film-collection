@@ -1,5 +1,5 @@
 @let films = filmsData();
-<app-input />
+<app-input [(value)]="searchFilm" />
 <div class="cards">
   @for (film of films; track film.id) {
     <app-film-card [filmInput]="film" />

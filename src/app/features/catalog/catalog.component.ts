@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { FilmService } from '../../core/services/film.service';
 import { FilmCardComponent } from './components/film-card/film-card.component';
 import { InputComponent } from './components/input/input.component';
@@ -11,5 +11,13 @@ import { InputComponent } from './components/input/input.component';
 })
 export class CatalogComponent {
   private filmService = inject(FilmService);
-  public filmsData = this.filmService.films;
+  public searchFilm = signal('');
+
+  public filmsData = computed(() =>
+    this.filmService
+      .films()
+      .filter((film) =>
+        film.title.toLocaleLowerCase().includes(this.searchFilm().toLocaleLowerCase()),
+      ),
+  );
 }

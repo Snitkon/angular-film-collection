@@ -1,4 +1,9 @@
 <div class="input">
   <img src="icons/loupe.svg" alt="loupe-icon" width="20" height="20" />
-  <input type="text" placeholder="Search by title..." />
+  <input
+    type="text"
+    placeholder="Search by title..."
+    [ngModel]="value()"
+    (ngModelChange)="valueChange.emit($event)"
+  />
 </div>
