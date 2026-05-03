@@ -16,10 +16,7 @@ export class BreadcrumbsService {
 
   public refresh(): void {
     const root = this.router.routerState.snapshot.root;
-    console.log(root.children.length);
-    for (const child of root.children) {
-      console.log(child.children);
-    }
+    this._breadcrumbs.set(this.buildBreadcrumbs(root));
   }
 
   private buildBreadcrumbs(
@@ -32,18 +29,18 @@ export class BreadcrumbsService {
 
     for (const child of children) {
       const routeURL = child.url.map((segment) => segment.path).join('/');
+      let nextUrl = url;
+
       if (routeURL !== '') {
-        url += `/${routeURL}`;
+        nextUrl += `/${routeURL}`;
       }
 
       const label = child.data['breadcrumb'];
-
-      if (label) {
-        breadcrumbs.push({ label, url });
+      if (label && nextUrl !== url) {
+        breadcrumbs.push({ label, url: nextUrl });
       }
 
-      // Рекурсивно идем глубже по дереву маршрутов
-      return this.buildBreadcrumbs(child, url, breadcrumbs);
+      return this.buildBreadcrumbs(child, nextUrl, breadcrumbs);
     }
     return breadcrumbs;
   }

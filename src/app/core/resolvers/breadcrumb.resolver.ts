@@ -7,5 +7,5 @@ export const breadcrumbResolver: ResolveFn<string> = (route) => {
   const id = route.paramMap.get('id');
 
   const film = filmService.getFilmById(id);
-  return film ? film.title : 'Film Details';
+  return film ? film.title : 'Move';
 };

@@ -1,5 +1,8 @@
-<h2>breadcrumbs works!</h2>
-<!-- @for (breadcrumb of breadcrumbs(); track $index) {
-  <p [style]="{ color: 'red' }">{{ breadcrumb.url }}</p>
+@for (breadcrumb of breadcrumbs(); track breadcrumb.url; let last = $last) {
+  @if (!last) {
+    <a [routerLink]="breadcrumb.url" class="label">{{ breadcrumb.label }}</a>
+    <span class="separator"> => </span>
+  } @else {
+    <span class="label_active">{{ breadcrumb.label }}</span>
+  }
 }
- -->

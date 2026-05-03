@@ -18,18 +18,23 @@ export const routes: Routes = [
       {
         path: 'home',
         data: { breadcrumb: 'Home' },
-        loadComponent: () =>
-          import('./features/catalog/catalog.component').then((c) => c.CatalogComponent),
-      },
-      {
-        path: 'home/:id',
-        resolve: { breadcrumb: breadcrumbResolver },
-        loadComponent: () =>
-          import('./features/film-details/film-details.component').then(
-            (c) => c.FilmDetailsComponent,
-          ),
-      },
 
+        children: [
+          {
+            path: '',
+            loadComponent: () =>
+              import('./features/catalog/catalog.component').then((c) => c.CatalogComponent),
+          },
+          {
+            path: ':id',
+            resolve: { breadcrumb: breadcrumbResolver },
+            loadComponent: () =>
+              import('./features/film-details/film-details.component').then(
+                (c) => c.FilmDetailsComponent,
+              ),
+          },
+        ],
+      },
       {
         path: 'about',
         data: { breadcrumb: 'About' },

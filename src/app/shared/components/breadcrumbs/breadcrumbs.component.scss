@@ -1,0 +1,23 @@
+:host {
+  // TODO: Fix to Mixin
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+
+  .separator {
+    color: var(--text-black);
+    cursor: default;
+  }
+
+  .label {
+    color: var(--text-black);
+    text-decoration: none;
+  }
+
+  .label_active {
+    color: var(--accent-color);
+    cursor: default;
+  }
+}
