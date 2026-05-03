@@ -1,5 +1,6 @@
 <app-header />
+<app-breadcrumbs />
 <main>
-  <router-outlet />
+  <router-outlet (activate)="breadcrumbService.refresh()" />
 </main>
 <app-footer />

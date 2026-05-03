@@ -11,4 +11,9 @@ export class FilmService {
   setFilms(data: IFilm[]) {
     this._films.set(data);
   }
+
+  getFilmById(id: string | null) {
+    if (id === null) return;
+    return this._films().find((film) => film.id === Number(id));
+  }
 }

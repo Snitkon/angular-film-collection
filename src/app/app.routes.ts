@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { NotFoundComponent } from './features/not-found/not-found.component';
 import { LayoutComponent } from './features/layout/layout.component';
 import { filmsResolver } from './core/resolvers/films.resolver';
+import { breadcrumbResolver } from './core/resolvers/breadcrumb.resolver';
 
 export const routes: Routes = [
   {
@@ -16,15 +17,24 @@ export const routes: Routes = [
       },
       {
         path: 'home',
-        loadChildren: () => import('./routes/catalog.routes').then((r) => r.CATALOG_ROUTE),
+        data: { breadcrumb: 'Home' },
+        loadComponent: () =>
+          import('./features/catalog/catalog.component').then((c) => c.CatalogComponent),
       },
       {
-        path: 'home/:title',
-        loadChildren: () => import('./routes/details.routes').then((r) => r.FILM_DETAILS_ROUTE),
+        path: 'home/:id',
+        resolve: { breadcrumb: breadcrumbResolver },
+        loadComponent: () =>
+          import('./features/film-details/film-details.component').then(
+            (c) => c.FilmDetailsComponent,
+          ),
       },
+
       {
         path: 'about',
-        loadChildren: () => import('./routes/about.routes').then((r) => r.ABOUT_ROUTE),
+        data: { breadcrumb: 'About' },
+        loadComponent: () =>
+          import('./features/about/about.component').then((c) => c.AboutComponent),
       },
     ],
   },
