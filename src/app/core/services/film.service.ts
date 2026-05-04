@@ -16,4 +16,10 @@ export class FilmService {
     if (id === null) return;
     return this._films().find((film) => film.id === Number(id));
   }
+
+  onFavorite(id: number) {
+    this._films.update((films) =>
+      films.map((film) => (film.id === id ? { ...film, isFavorite: !film.isFavorite } : film)),
+    );
+  }
 }

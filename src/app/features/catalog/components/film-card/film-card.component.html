@@ -2,7 +2,11 @@
 <div class="film-card" tabindex="0" (click)="openDetails()" (keydown.enter)="openDetails()">
   <div class="film-card__top-block" [style.background-image]="`url(${film.posterFallback})`">
     <img class="film-poster" src="{{ film.posterUrl || film.posterFallback }}" alt="film-poster" />
-    <button class="favorite-btn">
+    <button
+      class="favorite-btn"
+      [ngClass]="{ favorite: film.isFavorite }"
+      (click)="onFavorite($event)"
+    >
       <img src="icons/favorite.svg" alt="favorite-icon" width="24" height="24" />
     </button>
   </div>
