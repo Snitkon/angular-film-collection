@@ -1,8 +1,12 @@
 @let film = filmComputed();
 @if (film) {
   <div class="detail-card">
-    <div class="detail-card__left-block">
-      <img class="film-poster" src="{{ film.poster ?? '' }}" alt="film-poster" />
+    <div class="detail-card__left-block" [style.background-image]="`url(${film.posterFallback})`">
+      <img
+        class="film-poster"
+        src="{{ film.posterUrl || film.posterFallback }}"
+        alt="film-poster"
+      />
     </div>
     <div class="detail-card__right-block">
       <h2 class="title">{{ film.title }}</h2>

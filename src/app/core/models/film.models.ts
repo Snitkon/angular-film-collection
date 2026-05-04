@@ -1,7 +1,7 @@
 export interface IFilm {
   id: number;
   title: string;
-  poster?: string;
+  posterFallback: string;
   year: number;
   genre: string;
   rating: number;
