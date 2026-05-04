@@ -17,12 +17,15 @@
           }}</span
         >
         <span class="genre"
-          ><img src="icons/tape.svg" alt="calendar-icon" width="20" height="20" />{{
-            film.genre
+          ><img src="icons/tape.svg" alt="tape-icon" width="20" height="20" />{{ film.genre }}</span
+        >
+        <span class="clock"
+          ><img src="icons/clock.svg" alt="clock-icon" width="20" height="20" />{{
+            film.duration | duration
           }}</span
         >
         <span class="rating"
-          ><img src="icons/star.svg" alt="calendar-icon" width="20" height="20" />{{
+          ><img src="icons/star.svg" alt="star-icon" width="20" height="20" />{{
             film.rating
           }}/10</span
         >
