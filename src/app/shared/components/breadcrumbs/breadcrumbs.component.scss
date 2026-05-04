@@ -3,6 +3,7 @@
 :host {
   @include mixins.flex($justify: flex-start, $gap: 0.5rem);
   padding: 1rem;
+  padding-bottom: 0;
   font-size: 1.5rem;
 
   .separator {

@@ -1,4 +1,5 @@
 @let film = filmComputed();
+<span class="back" tabindex="0" (click)="back()" (keydown.enter)="back()"> < Go back </span>
 @if (film) {
   <div class="detail-card">
     <div class="detail-card__left-block" [style.background-image]="`url(${film.posterFallback})`">

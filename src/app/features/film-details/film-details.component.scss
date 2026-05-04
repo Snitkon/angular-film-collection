@@ -59,6 +59,15 @@
   }
 }
 
+.back {
+  color: var(--text-black);
+  cursor: pointer;
+  transition: var(--transition);
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
 @media (max-width: 750px) {
   .detail-card {
     @include mixins.flex($direction: column, $gap: 0px);
