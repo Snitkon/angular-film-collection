@@ -1,8 +1,7 @@
+@use '../../../styles/mixins' as mixins;
+
 :host {
-  // TODO: Fix to Mixin
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
+  @include mixins.flex($justify: flex-start, $gap: 0.5rem);
   padding: 1rem;
   font-size: 1.5rem;
 

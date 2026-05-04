@@ -1,19 +1,13 @@
+@use '../../../styles/mixins' as mixins;
+
 #footer {
-  // TODO: Fix on Mixin
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+  @include mixins.flex($gap: 1rem);
   padding: 1.5rem;
   background: var(--bg-dark);
   box-shadow: 0 8px 25px rgba(37, 23, 106, 0.55);
 
   .wrapper {
-    // TODO: Fix on Mixin
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    @include mixins.flex($justify: space-between, $gap: 1rem);
     width: 700px;
     margin: auto;
 

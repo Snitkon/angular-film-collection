@@ -1,12 +1,8 @@
-.input {
-  // TODO: Fix to Mixin
+@use '../../../../styles/mixins' as mixins;
 
-  display: flex;
-  max-width: 350px;
-  margin: auto;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
+.input {
+  @include mixins.flex($gap: 1rem);
+  width: 250px;
   padding: 0.3rem;
   border-radius: var(--radius);
   border: 1px solid var(--bg-grey);

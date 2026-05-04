@@ -1,3 +1,5 @@
+@use '../../../../styles/mixins' as mixins;
+
 .film-card {
   background-color: var(--bg-white);
   border-radius: var(--radius);
@@ -20,9 +22,7 @@
     height: 425px;
 
     .favorite-btn {
-      // TODO: Fix to Mixin
-
-      display: flex;
+      @include mixins.flex();
       position: absolute;
       border: none;
       background-color: var(--bg-light);
@@ -47,11 +47,7 @@
   }
 
   &__bottom-block {
-    // TODO: Fix to Mixin
-
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    @include mixins.flex($direction: column, $gap: 1rem, $align: normal);
     padding: 1rem;
 
     .title {
@@ -63,21 +59,14 @@
     }
 
     .about {
-      // TODO: Fix to Mixin
-
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      @include mixins.flex($justify: space-between, $gap: 1rem);
 
       span {
         color: var(--text-grey);
       }
 
       .rating {
-        // TODO: Fix to Mixin
-
-        display: flex;
-        gap: 0.2rem;
+        @include mixins.flex($align: normal, $gap: 0.2rem);
         color: var(--accent-color);
       }
     }
