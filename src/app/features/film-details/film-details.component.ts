@@ -1,7 +1,6 @@
 import { Component, computed, inject, input } from '@angular/core';
 import { FilmService } from '../../core/services/film.service';
 import { DurationPipe } from '../../shared/pipes/duration.pipe';
-// import { toSlug } from '../../shared/utils/url.util';
 
 @Component({
   selector: 'app-film-details',

@@ -10,3 +10,8 @@ export interface IFilm {
   posterUrl: string;
   isFavorite: boolean;
 }
+
+export interface IBreadcrumb {
+  label: string;
+  url: string;
+}

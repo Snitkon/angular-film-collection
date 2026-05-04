@@ -1,17 +1,13 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { ActivatedRouteSnapshot, Router } from '@angular/router';
-
-export interface Breadcrumb {
-  label: string;
-  url: string;
-}
+import { IBreadcrumb } from '../models/film.models';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BreadcrumbsService {
   private router = inject(Router);
-  private _breadcrumbs = signal<Breadcrumb[]>([]);
+  private _breadcrumbs = signal<IBreadcrumb[]>([]);
   public readonly breadcrumbs = this._breadcrumbs.asReadonly();
 
   public refresh(): void {
@@ -22,8 +18,8 @@ export class BreadcrumbsService {
   private buildBreadcrumbs(
     route: ActivatedRouteSnapshot,
     url = '',
-    breadcrumbs: Breadcrumb[] = [],
-  ): Breadcrumb[] {
+    breadcrumbs: IBreadcrumb[] = [],
+  ): IBreadcrumb[] {
     const children = route.children;
     if (children.length === 0) return breadcrumbs;
 
